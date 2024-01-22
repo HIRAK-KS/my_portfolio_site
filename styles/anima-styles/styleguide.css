@@ -1,0 +1,156 @@
+:root {
+  --paragraph-font-family: "NotoSans JP-Regular", Helvetica;
+  --paragraph-font-weight: 400;
+  --paragraph-font-size: 14px;
+  --paragraph-letter-spacing: 0.7px;
+  --paragraph-line-height: 200%;
+  --paragraph-font-style: normal;
+  --section-title-font-family: "NotoSans JP-Regular", Helvetica;
+  --section-title-font-weight: 400;
+  --section-title-font-size: 21px;
+  --section-title-letter-spacing: 1.05px;
+  --section-title-line-height: 200%;
+  --section-title-font-style: normal;
+  --page-title-font-family: "Roboto-Medium", Helvetica;
+  --page-title-font-weight: 500;
+  --page-title-font-size: 64px;
+  --page-title-letter-spacing: 3.84px;
+  --page-title-line-height: normal;
+  --page-title-font-style: normal;
+  --themes-color-text-primary: var(--basis-color-color-black);
+  --themes-color-text-sub: var(--basis-color-color-white);
+  --themes-color-surface: var(--basis-color-color-white);
+  --themes-color-surface-sub: var(--basis-color-color-black);
+  --themes-color-surface-faint: var(--basis-color-color-gray);
+  --themes-color-border-primary: var(--basis-color-color-black);
+  --themes-color-border-sub: var(--basis-color-color-white);
+  --themes-color-border-gray: var(--basis-color-color-gray);
+  --device-radius-radius-sm: 0px;
+  --device-radius-radius-md: 0px;
+  --device-radius-radius-lg: 14px;
+  --device-display-insp: none;
+  --device-display-intb-SP: none;
+  --device-display-inpc-TB: initial;
+  --device-display-inpc: initial;
+  --device-display-width: 1920px;
+  --device-padding-padding-xs: var(--basis-spacing-spacing-xs);
+  --device-padding-padding-sm: var(--basis-spacing-spacing-sm);
+  --device-padding-padding-md: var(--basis-spacing-spacing-md);
+  --device-padding-padding-lg: var(--basis-spacing-spacing-lg);
+  --device-padding-padding-xl: var(--basis-spacing-spacing-xl);
+  --device-padding-padding-2x: var(--basis-spacing-spacing-2x);
+  --device-padding-padding-3x: var(--basis-spacing-spacing-3x);
+  --device-padding-padding-4x: var(--basis-spacing-spacing-4x);
+  --device-button-btn-padding-x: 14px;
+  --device-button-btn-padding-y: 7px;
+  --basis-color-color-brand: rgba(0, 0, 0, 1);
+  --basis-color-color-black: rgba(0, 0, 0, 1);
+  --basis-color-color-white: rgba(255, 255, 255, 1);
+  --basis-color-color-gray: rgba(170, 170, 170, 1);
+  --basis-spacing-spacing-xs: 4px;
+  --basis-spacing-spacing-sm: 8px;
+  --basis-spacing-spacing-md: 16px;
+  --basis-spacing-spacing-lg: 24px;
+  --basis-spacing-spacing-xl: 32px;
+  --basis-spacing-spacing-2x: 48px;
+  --basis-spacing-spacing-3x: 96px;
+  --basis-spacing-spacing-4x: 120px;
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-themes-mode="light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-themes-mode="light"] {
+  --themes-color-text-primary: var(--basis-color-color-black);
+  --themes-color-text-sub: var(--basis-color-color-white);
+  --themes-color-surface: var(--basis-color-color-white);
+  --themes-color-surface-sub: var(--basis-color-color-black);
+  --themes-color-border-primary: var(--basis-color-color-black);
+  --themes-color-border-sub: var(--basis-color-color-white);
+}
+
+[data-themes-mode="dark"] {
+  --themes-color-text-primary: var(--basis-color-color-white);
+  --themes-color-text-sub: var(--basis-color-color-black);
+  --themes-color-surface: var(--basis-color-color-black);
+  --themes-color-surface-sub: var(--basis-color-color-white);
+  --themes-color-border-primary: var(--basis-color-color-white);
+  --themes-color-border-sub: var(--basis-color-color-black);
+}
+
+[data-device-mode="pc1920"] {
+  --device-radius-radius-lg: 14px;
+  --device-display-insp: none;
+  --device-display-intb-SP: none;
+  --device-display-inpc-TB: initial;
+  --device-display-inpc: initial;
+  --device-display-width: 1920px;
+  --device-padding-padding-md: var(--basis-spacing-spacing-md);
+  --device-padding-padding-lg: var(--basis-spacing-spacing-lg);
+  --device-padding-padding-xl: var(--basis-spacing-spacing-xl);
+  --device-padding-padding-2x: var(--basis-spacing-spacing-2x);
+  --device-padding-padding-3x: var(--basis-spacing-spacing-3x);
+  --device-padding-padding-4x: var(--basis-spacing-spacing-4x);
+  --device-button-btn-padding-x: 14px;
+  --device-button-btn-padding-y: 7px;
+}
+
+[data-device-mode="pc1280"] {
+  --device-radius-radius-lg: 14px;
+  --device-display-insp: none;
+  --device-display-intb-SP: none;
+  --device-display-inpc-TB: initial;
+  --device-display-inpc: initial;
+  --device-display-width: 1280px;
+  --device-padding-padding-md: var(--basis-spacing-spacing-md);
+  --device-padding-padding-lg: var(--basis-spacing-spacing-lg);
+  --device-padding-padding-xl: var(--basis-spacing-spacing-xl);
+  --device-padding-padding-2x: var(--basis-spacing-spacing-2x);
+  --device-padding-padding-3x: var(--basis-spacing-spacing-3x);
+  --device-padding-padding-4x: var(--basis-spacing-spacing-4x);
+  --device-button-btn-padding-x: 14px;
+  --device-button-btn-padding-y: 7px;
+}
+
+[data-device-mode="tb768"] {
+  --device-radius-radius-lg: 28px;
+  --device-display-insp: none;
+  --device-display-intb-SP: initial;
+  --device-display-inpc-TB: initial;
+  --device-display-inpc: none;
+  --device-display-width: 768px;
+  --device-padding-padding-md: var(--basis-spacing-spacing-sm);
+  --device-padding-padding-lg: var(--basis-spacing-spacing-sm);
+  --device-padding-padding-xl: var(--basis-spacing-spacing-md);
+  --device-padding-padding-2x: var(--basis-spacing-spacing-lg);
+  --device-padding-padding-3x: var(--basis-spacing-spacing-xl);
+  --device-padding-padding-4x: var(--basis-spacing-spacing-3x);
+  --device-button-btn-padding-x: 28px;
+  --device-button-btn-padding-y: 14px;
+}
+
+[data-device-mode="sp375"] {
+  --device-radius-radius-lg: 28px;
+  --device-display-insp: initial;
+  --device-display-intb-SP: initial;
+  --device-display-inpc-TB: none;
+  --device-display-inpc: none;
+  --device-display-width: 375px;
+  --device-padding-padding-md: var(--basis-spacing-spacing-sm);
+  --device-padding-padding-lg: var(--basis-spacing-spacing-sm);
+  --device-padding-padding-xl: var(--basis-spacing-spacing-md);
+  --device-padding-padding-2x: var(--basis-spacing-spacing-lg);
+  --device-padding-padding-3x: var(--basis-spacing-spacing-xl);
+  --device-padding-padding-4x: var(--basis-spacing-spacing-3x);
+  --device-button-btn-padding-x: 28px;
+  --device-button-btn-padding-y: 14px;
+}
