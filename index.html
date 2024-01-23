@@ -2,25 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1"
-    />
-    <title>
-      Keisuke Sato
-      Portfolio｜サトウケイスケのポートフォリオサイト
-    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Keisuke Sato Portfolio｜サトウケイスケのポートフォリオサイト</title>
     <meta name="description" content="ページの説明" />
     <link rel="icon" href="favicon.ico" />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Roboto&display=swap"
       rel="stylesheet"
@@ -28,46 +15,43 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
+
   <body class="global-layout">
     <header class="global-layout__header header">
-      <h1 class="text-wrapper">
+      <h1 class="header__logo">
         <a href="./">Keisuke Sato Portfolio</a>
       </h1>
-
       <nav>
-        <ul class="header-nav__list">
-          <li class="header-nav__item">
+        <ul class="header__navigation">
+          <li>
             <a href="#">Works</a>
           </li>
-          <li class="header-nav__item">
+          <li>
             <a href="#">About</a>
           </li>
-          <li class="header-nav__item">
+          <li>
             <a href="#">Service</a>
           </li>
-          <li class="header-nav__item">
+          <li>
             <a href="#">Contact</a>
           </li>
         </ul>
       </nav>
 
-      <button
-        class="global-layout__hamburger-button hamburger-button"
-      >
+      <button class="global-layout__hamburger-button hamburger-button">
         <span></span>
       </button>
     </header>
 
     <main class="global-layout__contents contents-layout">
-      <hgroup>
-        <h2 class="copy">
-          <span class="copy__design">Design</span>
-          <span class="copy__&">&amp;</span>
-          <span class=copy__cording">Cording</span>
+      <hgroup class="copy">
+        <h2>
+          <span class="copy__main">Design</span>
+          <span class="copy__main">&amp;</span>
+          <span class="copy__main">Cording</span>
         </h2>
-        <p>
-          Web制作フリーランス「サトウ
-          ケイスケ」のポートフォリオサイトです。
+        <p class="copy__sub">
+          Web制作フリーランス「サトウ ケイスケ」のポートフォリオサイトです。
           <br />今まで関わらさせていただいた案件での制作物やサンプルを掲載しております。
         </p>
       </hgroup>
@@ -78,87 +62,57 @@
       </div>
 
       <section class="works">
-        <ul class="grid__list">
+        <ul class="grid works__grid">
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-1.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-1.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-2.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-2.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-3.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-3.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-4.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-4.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-5.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-5.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-6.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-6.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-7.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-7.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item-8.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item-8.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img
-                src="./img/works-grid-item.png"
-                alt="制作物の画像"
-              />
+              <img src="./img/works-grid-item.png" alt="制作物の画像" />
             </a>
           </li>
         </ul>
       </section>
 
       <section class="about">
-        <img
-          class="about__image"
-          src="img/rectangle-217.png"
-        />
+        <img class="about__image" src="img/rectangle-217.png" />
         <div>
           <h2 class="section-title">About</h2>
           <hr />
@@ -174,63 +128,55 @@
           <h2 class="section-title">Service</h2>
           <a class="button">More</a>
         </div>
-        <ul class="card__list">
-          <li class="card__item">
+        <ul class="card-list">
+          <li class="card-list__item card">
             <a href="#" class="card__inner">
-              <div class="card__text-group">
-                <h3 class="card__title">
-                  Webサイトデザイン
-                </h3>
-                <p class="card__desc">
+              <div class="card__unit">
+                <h3 class="card__title">Webサイトデザイン</h3>
+                <p class="card__text">
                   コーポレートサイトやECサイト、商品紹介や採用のためのランディングページなどWebサイトのデザインを行います。ご依頼主様の商品サービスの魅力を引き出し、サイトを訪れた方にその魅力が伝わるようなデザインを心がけています。
                 </p>
               </div>
-              <div class="card__thmb">
+              <div class="card__image">
                 <img src="img/img-3.png" />
               </div>
             </a>
           </li>
-          <li class="card__item">
+          <li class="card-list__item card">
             <a href="#" class="card__inner">
-              <div class="card__text-group">
-                <h3 class="card__title">
-                  Webサイトデザイン
-                </h3>
-                <p class="card__desc">
+              <div class="card__unit">
+                <h3 class="card__title">Webサイトデザイン</h3>
+                <p class="card__text">
                   コーポレートサイトやECサイト、商品紹介や採用のためのランディングページなどWebサイトのデザインを行います。ご依頼主様の商品サービスの魅力を引き出し、サイトを訪れた方にその魅力が伝わるようなデザインを心がけています。
                 </p>
               </div>
-              <div class="card__thmb">
+              <div class="card__image">
                 <img src="img/img-3.png" />
               </div>
             </a>
           </li>
-          <li class="card__item">
+          <li class="card-list__item card">
             <a href="#" class="card__inner">
-              <div class="card__text-group">
-                <h3 class="card__title">
-                  Webサイトデザイン
-                </h3>
-                <p class="card__desc">
+              <div class="card__unit">
+                <h3 class="card__title">Webサイトデザイン</h3>
+                <p class="card__text">
                   コーポレートサイトやECサイト、商品紹介や採用のためのランディングページなどWebサイトのデザインを行います。ご依頼主様の商品サービスの魅力を引き出し、サイトを訪れた方にその魅力が伝わるようなデザインを心がけています。
                 </p>
               </div>
-              <div class="card__thmb">
+              <div class="card__image">
                 <img src="img/img-3.png" />
               </div>
             </a>
           </li>
-          <li class="card__item">
+          <li class="card-list__item card">
             <a href="#" class="card__inner">
-              <div class="card__text-group">
-                <h3 class="card__title">
-                  Webサイトデザイン
-                </h3>
-                <p class="card__desc">
+              <div class="card__unit">
+                <h3 class="card__title">Webサイトデザイン</h3>
+                <p class="card__text">
                   コーポレートサイトやECサイト、商品紹介や採用のためのランディングページなどWebサイトのデザインを行います。ご依頼主様の商品サービスの魅力を引き出し、サイトを訪れた方にその魅力が伝わるようなデザインを心がけています。
                 </p>
               </div>
-              <div class="card__thmb">
+              <div class="card__image">
                 <img src="img/img-3.png" />
               </div>
             </a>
@@ -242,38 +188,32 @@
     </main>
 
     <footer class="global-layout__footer footer">
-      <div class="footer__wrapper">
-        <div class="footer__logo">
-          <h2>Keisuke Sato<br />Portfolio</h2>
-        </div>
-        <nav class="footer-nav">
-          <div class="footer-nav__unit">
-            <h3 class="footer-nav__title">Site Menu</h3>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">Works</li>
-              <li class="footer-nav__item">About</li>
-              <li class="footer-nav__item">Service</li>
-              <li class="footer-nav__item">Contact</li>
-            </ul>
-          </div>
-          <div class="footer-nav__unit">
-            <h3 class="footer-nav__title">Social</h3>
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">Instagram</li>
-              <li class="footer-nav__item">X (Twitter)</li>
-              <li class="footer-nav__item">Github</li>
-            </ul>
-          </div>
-          <div class="footer-nav__unit">
-            <h3 class="footer-nav__title">Mail</h3>
-            <a
-              class="footer-nav__item"
-              href="mailto:hirak.keisuke@gmail.com"
-              >mail@keisukesato.com</a
-            >
-          </div>
-        </nav>
+      <div class="footer__logo">
+        <h2>Keisuke Sato<br />Portfolio</h2>
       </div>
+      <nav class="footer-nav">
+        <div class="footer-nav__unit">
+          <h3 class="footer-nav__title">Site Menu</h3>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">Works</li>
+            <li class="footer-nav__item">About</li>
+            <li class="footer-nav__item">Service</li>
+            <li class="footer-nav__item">Contact</li>
+          </ul>
+        </div>
+        <div class="footer-nav__unit">
+          <h3 class="footer-nav__title">Social</h3>
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">Instagram</li>
+            <li class="footer-nav__item">X (Twitter)</li>
+            <li class="footer-nav__item">Github</li>
+          </ul>
+        </div>
+        <div class="footer-nav__unit">
+          <h3 class="footer-nav__title">Mail</h3>
+          <a class="footer-nav__item" href="mailto:hirak.keisuke@gmail.com">mail@keisukesato.com</a>
+        </div>
+      </nav>
       <div class="copyright">
         <p>2024 Keisuke Sato</p>
       </div>

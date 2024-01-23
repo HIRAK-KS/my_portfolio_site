@@ -1,38 +1,74 @@
 @charset "UTF-8";
 
+/*--------------------
+VALIAVLES
+----------------------*/
 :root {
-    --color-brand: rgba(0, 0, 0, 1);
-    --color-black: rgba(0, 0, 0, 1);
-    --color-white: rgba(255, 255, 255, 1);
-    --color-gray: rgba(170, 170, 170, 1);
-    
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 48px;
-    --spacing-2x: 96px;
-    --spacing-3x: 144px;
+  --color-brand: rgba(0, 0, 0, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-gray: rgba(170, 170, 170, 1);
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+  --spacing-2x: 96px;
+  --spacing-3x: 144px;
 }
 
+/*----------------------
+INITIALIZATION
+------------------------*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*---------------------- 
+GRID LAYOUT
+------------------------*/
 .global-layout {
-    display: grid;
-    grid-template: "header" auto "contents" 1fr "footer" auto/100%;
-    min-height: 100vh;
-  }
-  
-  .global-layout__header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    grid-area: header;
-    width: 100%;
-  }
-  
-  .global-layout__contents {
-    grid-area: contents;
-  }
-  
-  .global-layout__footer {
-    grid-area: footer;
-  }
+  display: grid;
+  grid-template:
+    "header" auto
+    "contents" 1fr
+    "footer" auto /
+    100%;
+  min-height: 100vh;
+}
+.global-layout__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-area: header;
+}
+.global-layout__contents {
+  grid-area: contents;
+}
+.global-layout__footer {
+  grid-area: footer;
+}
+
+/*----------------------
+FRONT PAGE
+------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) var(--spacing-xl);
+}
+.header__navigation {
+  display: flex;
+  column-gap: var(--spacing-xl);
+  justify-content: flex-start;
+  list-style: none;
+}
