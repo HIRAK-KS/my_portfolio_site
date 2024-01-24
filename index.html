@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Keisuke Sato Portfolio｜サトウケイスケのポートフォリオサイト</title>
     <meta name="description" content="ページの説明" />
-    <link rel="icon" href="favicon.ico" />
+    <!-- <link rel="icon" href="favicon.ico" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,31 +18,68 @@
 
   <body class="global-layout">
     <header class="global-layout__header header">
-      <h1 class="header__logo">
-        <a href="./">Keisuke Sato Portfolio</a>
-      </h1>
-      <nav>
-        <ul class="header__navigation">
-          <li>
-            <a href="#">Works</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Service</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__inner wrapper">
+        <h1 class="logo">
+          <a href="./">Keisuke Sato Portfolio</a>
+        </h1>
+        <nav>
+          <ul class="header__navigation">
+            <li>
+              <a href="#">Works</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Service</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-      <button class="global-layout__hamburger-button hamburger-button">
-        <span></span>
-        <span></span>
-      </button>
+        <button class="global-layout__hamburger-button hamburger-button">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
+
+    <div class="navigation _hamburger" id="nav">
+      <div class="navigation__logo group-title">
+        <h2>Keisuke Sato<br />Portfolio</h2>
+      </div>
+      <nav class="navigation__body _hamburger">
+        <div class="navigation__unit">
+          <h3 class="group-title">Site Menu</h3>
+          <ul>
+            <li><a class="action-link">Works</a></li>
+            <li><a class="action-link">About</a></li>
+            <li><a class="action-link">Service</a></li>
+            <li><a class="action-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navigation__unit">
+          <h3 class="group-title">Social</h3>
+          <ul>
+            <li><a class="action-link">Instagram</a></li>
+            <li><a class="action-link">X (Twitter)</a></li>
+            <li><a class="action-link">Github</a></li>
+          </ul>
+        </div>
+        <div class="navigation__unit">
+          <h3 class="group-title">Mail</h3>
+          <ul>
+            <li>
+              <a href="mailto:hirak.keisuke@gmail.com" class="action-link">mail@keisukesato.com</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mask" id="mask"></div>
 
     <main class="global-layout__contents contents-layout">
       <hgroup class="copy">
@@ -66,54 +103,54 @@
         <ul class="grid works__grid">
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-1.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-1.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-2.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-2.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-3.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-3.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-4.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-4.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-5.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-5.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-6.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-6.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-7.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-7.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item-8.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item-8.png" alt="制作物の画像" />
             </a>
           </li>
           <li class="grid__item">
             <a href="#">
-              <img src="./img/works-grid-item.png" alt="制作物の画像" />
+              <img src="./images/works-grid-item.png" alt="制作物の画像" />
             </a>
           </li>
         </ul>
       </section>
 
       <section class="about">
-        <img class="about__image" src="img/rectangle-217.png" />
+        <img class="about__image" src="images/rectangle-217.png" />
         <div>
           <h2 class="section-title">About</h2>
           <hr />
@@ -139,7 +176,7 @@
                 </p>
               </div>
               <div class="card__image">
-                <img src="img/img-3.png" />
+                <img src="images/img-3.png" />
               </div>
             </a>
           </li>
@@ -152,7 +189,7 @@
                 </p>
               </div>
               <div class="card__image">
-                <img src="img/img-3.png" />
+                <img src="images/img-3.png" />
               </div>
             </a>
           </li>
@@ -165,7 +202,7 @@
                 </p>
               </div>
               <div class="card__image">
-                <img src="img/img-3.png" />
+                <img src="images/img-3.png" />
               </div>
             </a>
           </li>
@@ -178,46 +215,53 @@
                 </p>
               </div>
               <div class="card__image">
-                <img src="img/img-3.png" />
+                <img src="images/img-3.png" />
               </div>
             </a>
           </li>
         </ul>
       </section>
 
-      <img class="arrow-btn" src="img/arrow-btn-1.svg" />
+      <img class="arrow-btn" src="images/arrow-btn-1.svg" />
     </main>
 
     <footer class="global-layout__footer footer">
-      <div class="footer__logo">
-        <h2>Keisuke Sato<br />Portfolio</h2>
+      <div class="navigation _pc-footer wrapper">
+        <div class="navigation__logo group-title">
+          <h2>Keisuke Sato<br />Portfolio</h2>
+        </div>
+        <nav class="navigation__body">
+          <div class="navigation__unit">
+            <h3 class="group-title">Site Menu</h3>
+            <ul>
+              <li><a>Works</a></li>
+              <li><a>About</a></li>
+              <li><a>Service</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navigation__unit">
+            <h3 class="group-title">Social</h3>
+            <ul>
+              <li><a>Instagram</a></li>
+              <li><a>X (Twitter)</a></li>
+              <li><a>Github</a></li>
+            </ul>
+          </div>
+          <div class="navigation__unit">
+            <h3 class="group-title">Mail</h3>
+            <ul>
+              <li>
+                <a href="mailto:hirak.keisuke@gmail.com">mail@keisukesato.com</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="footer-nav">
-        <div class="footer-nav__unit">
-          <h3 class="footer-nav__title">Site Menu</h3>
-          <ul class="footer-nav__list">
-            <li class="footer-nav__item">Works</li>
-            <li class="footer-nav__item">About</li>
-            <li class="footer-nav__item">Service</li>
-            <li class="footer-nav__item">Contact</li>
-          </ul>
-        </div>
-        <div class="footer-nav__unit">
-          <h3 class="footer-nav__title">Social</h3>
-          <ul class="footer-nav__list">
-            <li class="footer-nav__item">Instagram</li>
-            <li class="footer-nav__item">X (Twitter)</li>
-            <li class="footer-nav__item">Github</li>
-          </ul>
-        </div>
-        <div class="footer-nav__unit">
-          <h3 class="footer-nav__title">Mail</h3>
-          <a class="footer-nav__item" href="mailto:hirak.keisuke@gmail.com">mail@keisukesato.com</a>
-        </div>
-      </nav>
       <div class="copyright">
         <p>2024 Keisuke Sato</p>
       </div>
     </footer>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
