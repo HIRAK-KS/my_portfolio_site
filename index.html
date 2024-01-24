@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
-  <body class="global-layout">
+  <body class="global-layout _column">
     <header class="global-layout__header header">
       <div class="header__inner wrapper">
         <h1 class="logo">
@@ -146,20 +146,24 @@
             </a>
           </li>
         </ul>
-        <div class="works-button">
+        <div class="works__button">
           <a class="button">More</a>
         </div>
       </section>
 
       <section class="about">
-        <img class="about__image" src="images/rectangle-217.png" />
-        <div>
+        <div class="about__image">
+          <img src="images/rectangle-217.png" />
+        </div>
+        <div class="about__body">
           <h2 class="section-title">About</h2>
           <hr />
           <p>
             北海道札幌市を中心にWebコーダー兼デザイナーとして活動しているサトウケイスケです。私はデザインやコーディングの技術はもちろんですが、一緒に仕事をする方々と信頼し合える関係を作ることを大切にしています。
           </p>
-          <a class="button">More</a>
+          <div class="about__button">
+            <a class="button">More</a>
+          </div>
         </div>
       </section>
 
@@ -223,8 +227,6 @@
           </li>
         </ul>
       </section>
-
-      <img class="arrow-btn" src="images/arrow-btn-1.svg" />
     </main>
 
     <footer class="global-layout__footer footer">
