@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/reset.css" />
@@ -81,12 +81,12 @@
 
     <div class="mask" id="mask"></div>
 
-    <main class="global-layout__contents contents-layout">
+    <main class="global-layout__contents contents-layout wrapper">
       <hgroup class="copy">
-        <h2>
-          <span class="copy__main">Design</span>
-          <span class="copy__main">&amp;</span>
-          <span class="copy__main">Cording</span>
+        <h2 class="copy__main">
+          <span class="copy__left">Design</span>
+          <span class="copy__center">&amp;</span>
+          <span class="copy__right">Cording</span>
         </h2>
         <p class="copy__sub">
           Web制作フリーランス「サトウ ケイスケ」のポートフォリオサイトです。
@@ -94,12 +94,11 @@
         </p>
       </hgroup>
 
-      <div>
-        <h2 class="section-title _vertical">Works</h2>
-        <a class="button">More</a>
-      </div>
-
       <section class="works">
+        <div class="vertical-group">
+          <h2 class="section-title">Works</h2>
+          <a class="button">More</a>
+        </div>
         <ul class="grid works__grid">
           <li class="grid__item">
             <a href="#">
@@ -147,6 +146,9 @@
             </a>
           </li>
         </ul>
+        <div class="works-button">
+          <a class="button">More</a>
+        </div>
       </section>
 
       <section class="about">
@@ -227,10 +229,10 @@
 
     <footer class="global-layout__footer footer">
       <div class="navigation _pc-footer wrapper">
-        <div class="navigation__logo group-title">
+        <div class="navigation__logo _pc-footer group-title">
           <h2>Keisuke Sato<br />Portfolio</h2>
         </div>
-        <nav class="navigation__body">
+        <nav class="navigation__body _pc-footer">
           <div class="navigation__unit">
             <h3 class="group-title">Site Menu</h3>
             <ul>
