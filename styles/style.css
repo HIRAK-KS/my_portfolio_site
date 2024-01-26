@@ -40,12 +40,15 @@ body {
   background-color: var(--color-white, #fff);
 }
 img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 a {
   cursor: pointer;
+}
+hr {
+  border-bottom: var(--border-primary);
 }
 .wrapper {
   max-width: 1280px;
@@ -68,12 +71,13 @@ a {
   font-size: 64px;
 }
 .group-title {
-  font-size: 1.6rem;
+  font: var(--font-title-en);
 }
 .button {
+  display: inline-block;
   align-self: flex-start;
   font: var(--font-text-en);
-  padding: 0.4em 0.7em;
+  padding: 0.4em 1em;
   border: var(--border-primary);
   border-radius: 2em;
   &:hover {
@@ -87,16 +91,17 @@ a {
   text-align: center;
   margin-top: 24px;
 }
-.card-list:last-of-type {
-  border-bottom: var(--border-primary);
-}
 .card {
   padding: 32px 0;
   border-top: var(--border-primary);
+  &:last-child {
+    border-bottom: var(--border-primary);
+  }
 }
 .card__inner {
   display: flex;
   justify-content: space-between;
+  gap: var(--spacing-responsive);
 }
 .card__image {
   width: 30%;
@@ -110,10 +115,12 @@ a {
 .card__title {
   font: var(--font-title-ja);
 }
+.card__date {
+  font-size: 1.2rem;
+}
 @media (max-width: 480px) {
   .card__inner {
     flex-direction: column-reverse;
-    gap: 24px;
   }
   .card__image,
   .card__unit {
@@ -169,6 +176,7 @@ LAYOUT
 }
 .global-layout__categories {
   padding: 48px;
+  border-right: var(--border-primary);
   grid-area: categories;
   @media (max-width: 800px) {
     padding: 24px 0 0;
@@ -406,9 +414,6 @@ ABOUT
   flex-direction: column;
   width: 70%;
   gap: 8px;
-  hr {
-    border-bottom: var(--border-primary);
-  }
 }
 .about__button {
   text-align: right;
@@ -458,6 +463,32 @@ WORKS PAGE
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.card._works .card__image {
+  width: auto;
+}
+
+/*----------------------
+SINGLE PAGE
+------------------------*/
+.page-title._single-works {
+  font: var(--font-title-ja);
+  font-size: 36px;
+}
+.description,
+.description__main,
+.description__sub {
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  gap: 48px;
+}
+.description__main {
+  gap: 24px;
+}
+.description__sub {
+  gap: 24px;
 }
 
 /* --------------------------------
@@ -538,3 +569,7 @@ MEDIA
     }
   }
 }
+
+/* ----------------------------------
+SWIPER
+------------------------------------ */
