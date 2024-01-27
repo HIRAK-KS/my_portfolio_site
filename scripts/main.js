@@ -24,25 +24,32 @@ mask.addEventListener("click", () => {
   mask.classList.remove("open");
 });
 
-/////////////////// SWIPER /////////////////////
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "vertical",
-  loop: true,
+/////////////////// SPLIDE /////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  var main = new Splide("#main-carousel", {
+    type: "fade",
+    rewind: true,
+    pagination: false,
+    arrows: false,
+  });
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
+  var thumbnails = new Splide("#thumbnail-carousel", {
+    fixedWidth: 100,
+    fixedHeight: 60,
+    gap: 10,
+    rewind: true,
+    pagination: false,
+    cover: true,
+    isNavigation: true,
+    breakpoints: {
+      600: {
+        fixedWidth: 60,
+        fixedHeight: 44,
+      },
+    },
+  });
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  main.sync(thumbnails);
+  main.mount();
+  thumbnails.mount();
 });
