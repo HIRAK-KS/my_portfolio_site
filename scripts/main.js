@@ -25,31 +25,34 @@ mask.addEventListener("click", () => {
 });
 
 /////////////////// SPLIDE /////////////////////
-document.addEventListener("DOMContentLoaded", function () {
-  var main = new Splide("#main-carousel", {
-    type: "fade",
-    rewind: true,
-    pagination: false,
-    arrows: false,
-  });
-
-  var thumbnails = new Splide("#thumbnail-carousel", {
-    fixedWidth: 100,
-    fixedHeight: 60,
-    gap: 10,
-    rewind: true,
-    pagination: false,
-    cover: true,
-    isNavigation: true,
-    breakpoints: {
-      600: {
-        fixedWidth: 60,
-        fixedHeight: 44,
-      },
-    },
-  });
-
-  main.sync(thumbnails);
-  main.mount();
-  thumbnails.mount();
+var splide = new Splide("#main-carousel", {
+  pagination: false,
 });
+
+var thumbnails = document.getElementsByClassName("thumbnail");
+var current;
+
+for (var i = 0; i < thumbnails.length; i++) {
+  initThumbnail(thumbnails[i], i);
+}
+
+function initThumbnail(thumbnail, index) {
+  thumbnail.addEventListener("click", function () {
+    splide.go(index);
+  });
+}
+
+splide.on("mounted move", function () {
+  var thumbnail = thumbnails[splide.index];
+
+  if (thumbnail) {
+    if (current) {
+      current.classList.remove("is-active");
+    }
+
+    thumbnail.classList.add("is-active");
+    current = thumbnail;
+  }
+});
+
+splide.mount();
