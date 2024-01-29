@@ -7,10 +7,12 @@ function add_files() {
     wp_enqueue_style('reset-style', get_theme_file_uri('/styles/reset.css'));
     // メインのCSSファイル
     wp_enqueue_style('main-style', get_stylesheet_uri());
-    //Splide
+    // SplideのCSSファイル
+    wp_enqueue_style('reset-style', get_theme_file_uri('/styles/splide.min.css'));
+    // SplideのJSファイル
     wp_enqueue_script( 'splide-js', get_theme_file_uri( '/scripts/splide.min.js'), array(), false, true );
     // メインのJSファイル
-    wp_enqueue_script('main-js', get_theme_file_uri('/scripts/main.js'), array('spride-js'), false, true);
+    wp_enqueue_script('main-js', get_theme_file_uri('/scripts/main.js'), array('splide-js'), false, true);
 }
 // add_files()を呼び出す
 add_action('wp_enqueue_scripts', 'add_files');

@@ -261,7 +261,7 @@ HEADER
 HAMBURGER
 --------------------------- */
 .hamburger-button {
-  position: absolute;
+  position: fixed;
   display: none;
   top: 5px;
   right: 6px;
