@@ -16,3 +16,21 @@ function add_files() {
 }
 // add_files()を呼び出す
 add_action('wp_enqueue_scripts', 'add_files');
+
+// titleタグを出力する
+function theme_setup() {
+    // titleタグ
+    add_theme_support('title_tag');
+    // titleタグ以外にもアイキャッチ画像やRSSフィールドリンクなどの設定もできる
+
+    // 管理画面 > 外観 > メニュー の有効化
+    register_nav_menus(
+        array(
+            'global-nav' => 'グローバルナビ',
+            'category-nav' => 'カテゴリーナビ',
+            'hamburger_nav' => 'ハンバーガーナビ',
+            'social-links' => 'ソーシャルリンク',
+        )
+    );
+}
+add_action('after_setup_theme', 'theme_setup');

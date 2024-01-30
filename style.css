@@ -142,7 +142,7 @@ LAYOUT
   display: grid;
   justify-content: center;
   min-height: 100vh;
-  &._1-column {
+  &.home {
     grid-template:
       "." 96px
       "header" auto

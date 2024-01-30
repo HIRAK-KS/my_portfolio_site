@@ -2,9 +2,19 @@
 <header class="global-layout__header header">
       <div class="header__inner wrapper">
         <h1 class="logo">
-          <a href="./">Keisuke Sato Portfolio</a>
+          <a href="<?php echo esc_url(home_url('/')); ?>">Keisuke Sato Portfolio</a>
         </h1>
-        <nav>
+        <?php
+          wp_nav_menu( array(
+            'menu_class' => 'header__navigation',
+            'container' => 'nav',
+            'fallback_cb' => false,
+            'echo' => true, // 変数に格納するならfalse
+            'depth' => 0, // 　x階層まで制限するなら数値を入力
+            'theme_location' => 'global-nav',
+            ) );
+        ?>
+            <!-- <nav>
           <ul class="header__navigation">
             <li>
               <a href="./archive-works.html">Works</a>
@@ -19,7 +29,7 @@
               <a href="#">Contact</a>
             </li>
           </ul>
-        </nav>
+        </nav> -->
       </div>
     </header>
     <button class="hamburger-button">

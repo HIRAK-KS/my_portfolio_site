@@ -1,7 +1,7 @@
 
   <?php get_header(); ?>
 
-  <body class="global-layout _1-column">
+
     <?php get_template_part('./includes/header'); ?>
     <main class="global-layout__contents contents-layout wrapper">
       <hgroup class="copy">
