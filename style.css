@@ -151,8 +151,8 @@ LAYOUT
       "footer" auto /
       100%;
   }
-  &._archive,
-  &._single {
+  &.archive,
+  &.single {
     grid-template:
       "header header header header" auto
       ". categories . ." 120px
