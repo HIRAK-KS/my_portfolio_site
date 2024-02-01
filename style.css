@@ -163,7 +163,7 @@ LAYOUT
       minmax(40px, 1fr) minmax(50px, 200px) minmax(500px, 1000px) minmax(40px, 1fr);
   }
   @media (max-width: 800px) {
-    &._archive {
+    &.archive {
       grid-template:
         "header header header" auto
         ". . ." 96px
@@ -174,7 +174,7 @@ LAYOUT
         "footer footer footer" auto /
         24px 1fr 24px;
     }
-    &._single {
+    &.single {
       grid-template:
         "header header header" auto
         ". . ." 96px

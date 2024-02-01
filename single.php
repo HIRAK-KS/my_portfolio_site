@@ -1,23 +1,10 @@
 <?php get_header(); ?>
 <?php get_template_part('./includes/header'); ?>
-
-div class="mask" id="mask"></div>
+<?php get_template_part('./includes/sidebar'); ?>
 
 <div class="global-layout__heading heading">
   <h2 class="page-title _single-works">marumaru株式会社コーポレートサイト</h2>
 </div>
-
-<nav class="global-layout__categories categories _single">
-  <div class="categories__inner sticky">
-    <h2 class="categories__title group-title">Categories</h2>
-    <ul class="categories__list">
-      <li><a class="button">Design</a></li>
-      <li><a class="button">Cording</a></li>
-      <li><a class="button">Direction</a></li>
-      <li><a class="button">Marketing</a></li>
-    </ul>
-  </div>
-</nav>
 
 <main class="global-layout__contents _2-column">
   <div>

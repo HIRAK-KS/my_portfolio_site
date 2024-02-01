@@ -39,3 +39,23 @@ function theme_setup()
     );
 }
 add_action('after_setup_theme', 'theme_setup');
+
+// wp_nav_menuの<li>にクラスを追加する関数
+function add_class_on_li($classes, $item, $args)
+{
+    if (isset($args->li_class)) {
+        $classes[] = $args->li_class;
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'add_class_on_li', 1, 3);
+
+// wp_nav_menuの<a>にクラスを追加する関数
+function add_class_on_a($atts, $item, $args)
+{
+    if (isset($args->a_class)) {
+        $atts['class'] = $args->a_class;
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_class_on_a', 1, 3);
