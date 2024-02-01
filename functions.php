@@ -40,6 +40,7 @@ function theme_setup()
 }
 add_action('after_setup_theme', 'theme_setup');
 
+
 // wp_nav_menuの<li>にクラスを追加する関数
 function add_class_on_li($classes, $item, $args)
 {

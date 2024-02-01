@@ -9,25 +9,33 @@
 <main class="global-layout__contents _2-column">
   <section class="archive-works">
     <ul class="card-list">
-      <li class="card _works">
-        <a href="./single-works.html" class="card__inner">
-          <div class="card__unit">
-            <h3 class="card__title">Webサイトデザイン</h3>
-            <p class="card__date">2023.5.5</p>
-            <p class="card__text">
-              コーポレートサイトやECサイト、商品紹介や採用のためのランディングページなどWebサイトのデザインを行います。ご依頼主様の商品サービスの魅力を引き出し、サイトを訪れた方にその魅力が伝わるようなデザインを心がけています。
-            </p>
-            <p class="button" href="">More</p>
-          </div>
-          <div class="card__image">
-            <img src="images/img-3.png" />
-          </div>
-        </a>
-      </li>
-
+      <?php if (have_posts()) : while (have_posts()) :  the_post(); ?>
+          <li class="card _works">
+            <a href="<?= esc_url(get_permalink()); ?>" class="card__inner">
+              <div class="card__unit">
+                <h3 class="card__title"><?php the_title(); ?></h3>
+                <p class="card__date">2023.5.5</p>
+                <p class="card__text">
+                  <?= esc_html(get_the_excerpt()); ?>
+                </p>
+                <p class="button" href="">More</p>
+              </div>
+              <div class="card__image">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php else : ?>
+                  <img src="<?= esc_url(get_theme_file_uri('/images/img.png')); ?> alt="" class=" wp-post-image">
+                <?php endif; ?>
+              </div>
+            </a>
+          </li>
+        <?php endwhile;
+      else : ?>
+        <p>制作実績がありません</p>
+      <?php endif; ?>
     </ul>
     <div class="pagination">
-      <p>1 / 2 / 3</a>
+      <p>1 / 2 / 3</p>
     </div>
   </section>
 </main>
