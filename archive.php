@@ -34,9 +34,15 @@
         <p>制作実績がありません</p>
       <?php endif; ?>
     </ul>
-    <div class="pagination">
+    <?php
+    the_posts_pagination([
+      'prev_text' => '',
+      'next_text' => '',
+    ]);
+    ?>
+    <!-- <div class="pagination">
       <p>1 / 2 / 3</p>
-    </div>
+    </div> -->
   </section>
 </main>
 
