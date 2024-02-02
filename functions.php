@@ -71,3 +71,21 @@ function post_has_archive($args, $post_type)
     return $args;
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+
+// ACFの画像URLとIDを取得しimgタグを返す
+function my_custom_image($field_name)
+{
+    $image_id = get_field($field_name); // ACFから画像IDを取得
+    if ($image_id) {
+        $image_url = wp_get_attachment_image_url($image_id, 'full'); // 画像URLを取得
+        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true); // altテキストを取得
+
+        // altテキストが空の場合、デフォルトのテキストを設定
+        if (empty($image_alt)) {
+            $image_alt = '制作実績の画像';
+        }
+
+        echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($image_alt) . '">';
+    }
+}

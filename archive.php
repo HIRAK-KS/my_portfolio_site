@@ -18,14 +18,10 @@
                 <p class="card__text">
                   <?= esc_html(get_the_excerpt()); ?>
                 </p>
-                <p class="button" href="">More</p>
+                <p class="button">More</p>
               </div>
               <div class="card__image">
-                <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(); ?>
-                <?php else : ?>
-                  <img src="<?= esc_url(get_theme_file_uri('/images/img.png')); ?> alt="" class=" wp-post-image">
-                <?php endif; ?>
+                <?php the_post_thumbnail(); ?>
               </div>
             </a>
           </li>
@@ -40,9 +36,6 @@
       'next_text' => '',
     ]);
     ?>
-    <!-- <div class="pagination">
-      <p>1 / 2 / 3</p>
-    </div> -->
   </section>
 </main>
 
