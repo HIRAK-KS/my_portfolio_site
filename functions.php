@@ -9,7 +9,7 @@ function add_files()
     // メインのCSSファイル
     wp_enqueue_style('main-style', get_stylesheet_uri());
     // SplideのCSSファイル
-    wp_enqueue_style('reset-style', get_theme_file_uri('/styles/splide.min.css'));
+    wp_enqueue_style('splide-style', get_theme_file_uri('/styles/splide.min.css'));
     // SplideのJSファイル
     wp_enqueue_script('splide-js', get_theme_file_uri('/scripts/splide.min.js'), array(), false, true);
     // メインのJSファイル
@@ -60,3 +60,14 @@ function add_class_on_a($atts, $item, $args)
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_class_on_a', 1, 3);
+
+// Works一覧ページを追加
+function post_has_archive($args, $post_type)
+{
+    if ('post' == $post_type) {
+        $args['rewrite'] = true;
+        $args['has_archive'] = 'works'; //任意のスラッグ名
+    }
+    return $args;
+}
+add_filter('register_post_type_args', 'post_has_archive', 10, 2);

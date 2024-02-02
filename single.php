@@ -2,8 +2,9 @@
 <?php get_template_part('./includes/header'); ?>
 <?php get_template_part('./includes/sidebar'); ?>
 
+
 <div class="global-layout__heading heading">
-  <h2 class="page-title _single-works">marumaru株式会社コーポレートサイト</h2>
+  <h2 class="page-title _single-works"><?php the_field('works-name'); ?></h2>
 </div>
 
 <main class="global-layout__contents _2-column">
@@ -12,113 +13,108 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <img src="./images/works-grid-item-1.png" alt="" />
+            <img src="<?php the_field('works-image-sub1'); ?>" alt="" />
           </li>
           <li class="splide__slide">
-            <img src="./images/works-grid-item-2.png" alt="" />
+            <img src="<?php the_field('works-image-sub2'); ?>" alt="" />
           </li>
           <li class="splide__slide">
-            <img src="./images/works-grid-item-3.png" alt="" />
+            <img src="<?php the_field('works-image-sub3'); ?>" alt="" />
           </li>
           <li class="splide__slide">
-            <img src="./images/works-grid-item-4.png" alt="" />
+            <img src="<?php the_field('works-image-sub4'); ?>" alt="" />
           </li>
           <li class="splide__slide">
-            <img src="./images/works-grid-item-5.png" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="./images/works-grid-item-6.png" alt="" />
+            <img src="<?php the_field('works-image-sub5'); ?>" alt="" />
           </li>
         </ul>
       </div>
     </section>
     <ul id="thumbnails" class="thumbnails">
       <li class="thumbnail">
-        <img src="./images/works-grid-item-1.png" alt="" />
+        <img src="<?php the_field('works-image-sub1'); ?>" alt="" />
       </li>
       <li class="thumbnail">
-        <img src="./images/works-grid-item-2.png" alt="" />
+        <img src="<?php the_field('works-image-sub2'); ?>" alt="" />
       </li>
       <li class="thumbnail">
-        <img src="./images/works-grid-item-3.png" alt="" />
+        <img src="<?php the_field('works-image-sub3'); ?>" alt="" />
       </li>
       <li class="thumbnail">
-        <img src="./images/works-grid-item-4.png" alt="" />
+        <img src="<?php the_field('works-image-sub4'); ?>" alt="" />
       </li>
       <li class="thumbnail">
-        <img src="./images/works-grid-item-5.png" alt="" />
-      </li>
-      <li class="thumbnail">
-        <img src="./images/works-grid-item-6.png" alt="" />
+        <img src="<?php the_field('works-image-sub5'); ?>" alt="" />
       </li>
     </ul>
   </div>
   <div class="description">
     <dl class="description__main">
       <dt>制作カテゴリー</dt>
-      <dd>コーポレートサイト制作</dd>
+      <dd><?php the_field('works-category'); ?></dd>
       <dt>担当範囲</dt>
-      <dd>ディレクション / デザイン / コーディング</dd>
-      <dt>ターゲット</dt>
-      <dd>60代女性</dd>
-      <dt>制作の目的</dt>
-      <dd>社会的信用の獲得</dd>
-      <dt>制作概要</dt>
       <dd>
-        見た目が可愛いのはもちろん、味や食感にこだわって作ったシンプルだけど特別なお菓子の魅力が伝わる、ほっこり可愛らしいデザインで世界観を統一。
-        お子様へのプレゼントや結婚祝いなどにお菓子を購入される女性ユーザーが多いため、安心感と親しみやすさがあり、「人に喜ばれるオリジナルクッキーが買える店」
-        というイメージになることを目標としました。
+        <?php
+        $areas = get_field('works-area');
+        if ($areas) : ?>
+          <ul>
+            <?php foreach ($areas as $area) : ?>
+              <li><?php echo esc_html($area); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
       </dd>
+      <dt>ターゲット</dt>
+      <dd><?php the_field('works-target'); ?></dd>
+      <dt>制作の目的</dt>
+      <dd><?php the_field('works-purpose'); ?></dd>
+      <dt>制作概要</dt>
+      <dd><?php the_field('works-outline'); ?></dd>
     </dl>
     <dl class="description__sub">
       <dt>業種</dt>
-      <dd>高齢者住宅紹介業</dd>
+      <dd><?php the_field('works-industry'); ?></dd>
       <dt>ページ数</dt>
-      <dd>8ページ</dd>
+      <dd><?php the_field('works-pages'); ?></dd>
       <dt>制作期間</dt>
-      <dd>1ヶ月</dd>
+      <dd><?php the_field('works-period'); ?></dd>
       <dt>使用ツール</dt>
-      <dd>WordPress / Photoshop / Illustrator / Figma</dd>
+      <dd><?php the_field('works-tools'); ?></dd>
       <dt>URL</dt>
-      <dd>marumaru.com</dd>
+      <dd><?php the_field('works-url'); ?></dd>
       <dt>公開日</dt>
-      <dd>2023.5.4</dd>
+      <dd><?php the_field('works-publication'); ?></dd>
       <dt>クライアント</dt>
-      <dd>marumaru株式会社</dd>
+      <dd><?php the_field('works-client'); ?></dd>
     </dl>
   </div>
   <section class="cta">
     <h2 class="section-title">Other Works</h2>
-    <ul class="categories__list _cta">
-      <li><a class="button">Design</a></li>
-      <li><a class="button">Cording</a></li>
-      <li><a class="button">Direction</a></li>
-      <li><a class="button">Marketing</a></li>
-    </ul>
     <ul class="grid-list">
-      <li>
-        <a href="#">
-          <figure class="grid-list__item">
-            <div class="grid-list__image">
-              <img src="./images/works-grid-item-1.png" alt="制作物の画像" />
-              <div class="grid-list__mask"></div>
-            </div>
-            <figcaption class="grid-list__caption">高齢者住宅紹介コーポレートサイト</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <figure class="grid-list__item">
-            <div class="grid-list__image">
-              <img src="./images/works-grid-item-2.png" alt="制作物の画像" />
-              <div class="grid-list__mask"></div>
-            </div>
-            <figcaption class="grid-list__caption">高齢者住宅紹介コーポレートサイト</figcaption>
-          </figure>
-        </a>
-      </li>
+      <?php if (have_posts()) : while (have_posts()) :  the_post(); ?>
+          <li>
+            <a href="<?= esc_url(get_permalink()); ?>">
+              <figure class="grid-list__item">
+                <div class="grid-list__image">
+                  <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail(); ?>
+                  <?php else : ?>
+                    <img src="<?= esc_url(get_theme_file_uri('/images/img.png')); ?> alt="" class=" wp-post-image">
+                  <?php endif; ?>
+                  <div class="grid-list__mask"></div>
+                </div>
+                <figcaption class="grid-list__caption">
+                  <h3><?php the_title(); ?></h3>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        <?php endwhile;
+      else : ?>
     </ul>
+    <p>制作実績がありません</p>
+  <?php endif; ?>
+  </ul>
   </section>
 </main>
 

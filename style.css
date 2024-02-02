@@ -142,7 +142,8 @@ LAYOUT
   display: grid;
   justify-content: center;
   min-height: 100vh;
-  &.home {
+  &.home,
+  &.error404 {
     grid-template:
       "." 96px
       "header" auto

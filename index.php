@@ -16,7 +16,7 @@
   <section class="works">
     <div class="vertical-group sticky">
       <h2 class="section-title">Works</h2>
-      <a class="button">More</a>
+      <a href="<?= home_url('/works/'); ?>" class="button">More</a>
     </div>
     <ul class="grid-list">
       <?php if (have_posts()) : while (have_posts()) :  the_post(); ?>
@@ -42,12 +42,12 @@
     </ul>
     <p>制作実績がありません</p>
   <?php endif; ?>
-  <div class="sp-button">
+  <!-- <div class="sp-button">
     <a class="button">More</a>
-  </div>
+  </div> -->
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__image">
       <img src="<?= esc_url(get_theme_file_uri('/images/rectangle-217.png')) ?>" />
     </div>
@@ -58,16 +58,16 @@
         北海道札幌市を中心にWebコーダー兼デザイナーとして活動しているサトウケイスケです。私はデザインやコーディングの技術はもちろんですが、一緒に仕事をする方々と信頼し合える関係を作ることを大切にしています。
       </p>
       <div class="about__button">
-        <a class="button">More</a>
+        <!-- <a class="button">More</a> -->
       </div>
     </div>
   </section>
 
-  <section class="service">
+  <section class="service" id="service">
     <div class="service__sidebar">
       <div class="service__heading sticky">
         <h2 class="section-title">Service</h2>
-        <a class="button">More</a>
+        <!-- <a class="button">More</a> -->
       </div>
     </div>
     <ul class="card-list _service">
