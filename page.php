@@ -2,7 +2,7 @@
 <?php get_template_part('./includes/header'); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <main class="global-layout__contents contents-layout wrapper">
+        <main class="global-layout__contents contents-layout wrapper _page">
             <h2 class="page-title"><?php the_title(); ?></h2>
             <div>
                 <?php the_content(); ?>

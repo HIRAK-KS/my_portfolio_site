@@ -37,5 +37,3 @@
     </div>
   </nav>
 </div>
-
-<div class="mask" id="mask"></div>
